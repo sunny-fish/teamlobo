@@ -119,7 +119,6 @@ class Renderer: NSObject {
 	}
     
 	func reset() {
-		ballNode.position = ballOriginalPosition
 		for i in 0..<cupCount {
 			let cup = cups[i]
 			let position = positions[i]
@@ -131,6 +130,8 @@ class Renderer: NSObject {
 		let ballWait = SCNAction.wait(duration: 0.8)
 		let ballHide = SCNAction.hide()
 		let ballSequence = SCNAction.sequence([ballWait, ballHide])
-			ballNode.runAction(ballSequence)
+            ballNode.runAction(ballSequence)
+        
+        cupGame.AddBall()
 	}
 }

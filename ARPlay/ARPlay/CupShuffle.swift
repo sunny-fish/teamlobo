@@ -42,7 +42,11 @@ class CupShuffle {
     }
     
     func AddBall() {
-        gameCups.cups[self.RandomValidCupIndex(not: -1)].hasBall = true
+        for i in 1...3 {
+            gameCups.cups.append(Cup(hasBall: false, position: i, emptyPos: false, id: i))
+        }
+        
+        gameCups.cups[0].hasBall = true
     }
     
     func RandomValidCupIndex(not: Int?) -> Int {
