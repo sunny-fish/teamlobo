@@ -17,6 +17,8 @@ class Renderer: NSObject {
 	let scene = SCNScene(named: "art.scnassets/RedPlasticCup.scn")!
 	var cups = [SCNNode]()
 	var positions = [SCNVector3]()
+	var ballOriginalPosition: SCNVector3
+	var ballPositionDeltas = [Float]()
     
     var cupGame: CupShuffle
 
@@ -25,7 +27,7 @@ class Renderer: NSObject {
 		ballNode = scene.rootNode.childNode(withName: "Ball", recursively: true)!
         
         cupGame = CupShuffle(cups: cupCount)
-        
+        ballOriginalPosition = ballNode.position
 		super.init()
         
         cupGame.AddBall()
@@ -41,6 +43,11 @@ class Renderer: NSObject {
 		positions = cups.map({ (node) -> SCNVector3 in
 			return node.position
 		})
+		for i in 0..<cupCount {
+			let first = positions[0]
+			let this = positions[i]
+			ballPositionDeltas.append(this.x - first.x)
+		}
 	}
 
 	func parentCup(from node: SCNNode) -> SCNNode? {
@@ -57,8 +64,11 @@ class Renderer: NSObject {
 		guard let parentCup = parentCup(from: cup) else {
 			return
 		}
-		let destination = SCNVector3(parentCup.position.x, parentCup.position.y + 0.3, parentCup.position.z-8)
-		let action = SCNAction.move(to: destination, duration: 0.5)
+        
+        ballNode.isHidden = false
+		let destination = SCNVector3(parentCup.position.x, parentCup.position.y + 0.3, parentCup.position.z)
+
+        let action = SCNAction.move(to: destination, duration: 0.5)
 		parentCup.runAction(action)
 	}
 
@@ -93,8 +103,13 @@ class Renderer: NSObject {
         
         return sequence
     }
+
+	func moveBall(to position: Int) {
+		ballNode.position = SCNVector3(ballNode.position.x + ballPositionDeltas[position], ballNode.position.y, ballNode.position.z)
+	}
     
 	func reset() {
+		ballNode.position = ballOriginalPosition
 		for i in 0..<cupCount {
 			let cup = cups[i]
 			let position = positions[i]
@@ -102,7 +117,10 @@ class Renderer: NSObject {
 			cup.position = upPosition
 			let action = SCNAction.move(to: position, duration: 0.8)
 			cup.runAction(action)
-
 		}
+		let ballWait = SCNAction.wait(duration: 0.8)
+		let ballHide = SCNAction.hide()
+		let ballSequence = SCNAction.sequence([ballWait, ballHide])
+			ballNode.runAction(ballSequence)
 	}
 }
