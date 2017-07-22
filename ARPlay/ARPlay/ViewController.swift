@@ -24,8 +24,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.showsStatistics = true
         
         // Create a new scene
-        let scene = SCNScene(named: "art.scnassets/RedPlasticCup.scn")!
-        
+        let scene = CupsScene()
         // Set the scene to the view
         sceneView.scene = scene
     }
