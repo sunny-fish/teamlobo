@@ -88,5 +88,15 @@ class Renderer: NSObject {
         return sequence
     }
     
-    
+	func reset() {
+		for i in 0..<cupCount {
+			let cup = cups[i]
+			let position = positions[i]
+			let upPosition = SCNVector3(position.x, position.y + 0.3, position.z)
+			cup.position = upPosition
+			let action = SCNAction.move(to: position, duration: 0.8)
+			cup.runAction(action)
+
+		}
+	}
 }

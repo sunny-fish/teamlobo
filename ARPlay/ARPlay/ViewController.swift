@@ -91,4 +91,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 			// Shuffle cups
 		}
 	}
+	@IBAction func swipeScene(_ sender: Any) {
+		// reset
+		renderer.reset()
+
+	}
 }
