@@ -13,6 +13,8 @@ import ARKit
 class ViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
+
+	let renderer = Renderer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +26,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.showsStatistics = true
         
         // Create a new scene
-        let scene = SCNScene(named: "art.scnassets/RedPlasticCup.scn")!
+        let scene = renderer.scene
         
         // Set the scene to the view
         sceneView.scene = scene
