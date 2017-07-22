@@ -95,3 +95,15 @@ class CupShuffle {
     }
 }
 
+// Sample Playground Code
+//var cupGame  = CupShuffle(cups: 3)
+//
+//cupGame.AddBall()
+//
+//cupGame.printCupAt(0)
+//cupGame.printCupAt(1)
+//cupGame.printCupAt(2)
+//print ("****************************\n")
+//
+//cupGame.ShuffleCups(times: 4)
+
