@@ -87,6 +87,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 		if let first = hits.first, let cup = renderer.parentCup(from: first.node) {
 			renderer.lift(cup: cup)
 		} else {
+            renderer.moveCups()
 			// Shuffle cups
 		}
 	}

@@ -62,20 +62,31 @@ class Renderer: NSObject {
 		parentCup.runAction(action)
 	}
 
-	func moveCup(index: Int, from: Int, to: Int) {
-
+	func moveCups() {
         let move = cupGame.ShuffleCupsOnce()
-        // move.from
-        // move.to
         
-		let zDirection: Float = from > to ? -1 : 1
-
-        let fromPosition = positions[from]
-		let toPosition = positions[to]
-		let halfPosition = SCNVector3(((toPosition.x - fromPosition.x) / 2.0) + fromPosition.x, toPosition.y, toPosition.z + (0.2 * zDirection))
-		let first = SCNAction.move(to: halfPosition, duration: 0.5)
-		let second = SCNAction.move(to: toPosition, duration: 0.5)
-		let sequence = SCNAction.sequence([first, second])
-		self.cups[index].runAction(sequence)
+        let act1 = moveCup(from: move.from, to: move.to)
+        let act2 = moveCup(from: move.to, to: move.from)
+        
+		self.cups[move.from].runAction(act1)
+        self.cups[move.to].runAction(act2)
 	}
+    
+    func moveCup(from: Int, to: Int) -> SCNAction {
+        let zDirection: Float = from > to ? -1 : 1
+        
+        let fromPosition = positions[from]
+        let toPosition = positions[to]
+        
+        let halfPosition = SCNVector3(((toPosition.x - fromPosition.x) / 2.0) +
+            fromPosition.x, toPosition.y, toPosition.z + (0.2 * zDirection))
+        
+        let first = SCNAction.move(to: halfPosition, duration: 0.5)
+        let second = SCNAction.move(to: toPosition, duration: 0.5)
+        let sequence = SCNAction.sequence([first, second])
+        
+        return sequence
+    }
+    
+    
 }
