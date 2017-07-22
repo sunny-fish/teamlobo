@@ -57,7 +57,7 @@ class Renderer: NSObject {
 		guard let parentCup = parentCup(from: cup) else {
 			return
 		}
-		let destination = SCNVector3(parentCup.position.x, parentCup.position.y + 0.3, parentCup.position.z)
+		let destination = SCNVector3(parentCup.position.x, parentCup.position.y + 0.3, parentCup.position.z-8)
 		let action = SCNAction.move(to: destination, duration: 0.5)
 		parentCup.runAction(action)
 	}
@@ -90,7 +90,6 @@ class Renderer: NSObject {
         let first = SCNAction.move(to: halfPosition, duration: 0.5)
         let second = SCNAction.move(to: toPosition, duration: 0.5)
         let sequence = SCNAction.sequence([first, second])
-        
         
         return sequence
     }
