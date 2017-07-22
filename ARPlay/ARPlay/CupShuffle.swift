@@ -23,20 +23,20 @@ class CupShuffle {
     var gameCups = CupGame(cups:[])
     
     init(cups: Int) {
-        let postions = cups + 2
+        let postions = cups
         
         for i in 1...postions {
-            if i == 1 {
-                gameCups.cups.append(Cup(hasBall: false, position: i, emptyPos: true))
-                continue
-            }
+            //            if i == 1 {
+            //                gameCups.cups.append(Cup(hasBall: false, position: i, emptyPos: true))
+            //                continue
+            //            }
+            //
+            //            if i == postions {
+            //                gameCups.cups.append(Cup(hasBall: false, position: i, emptyPos: true))
+            //                continue
+            //            }
             
-            if i == postions {
-                gameCups.cups.append(Cup(hasBall: false, position: i, emptyPos: true))
-                continue
-            }
-            
-            gameCups.cups.append(Cup(hasBall: false, position: i, emptyPos: false))
+            gameCups.cups.append(Cup(hasBall: false, position: i, emptyPos: false, id: i))
         }
     }
     
@@ -68,8 +68,7 @@ class CupShuffle {
     
     func ShuffleCupStep(fromPos: Int, toPos: Int) {
         var arr = gameCups.cups
-        let element = arr.remove(at: fromPos)
-        arr.insert(element, at: toPos)
+        arr.swapAt(fromPos, toPos)
         
         gameCups.cups = arr
         
@@ -80,14 +79,18 @@ class CupShuffle {
             gameCups.cups[i].position = i + 1
         }
         
-        print ("\n\n")
         for i in 0...cupElements {
             printCupAt(i)
         }
+        
+        print ("\n\n")
     }
     
     func printCupAt(_ index: Int) {
-        print ("Has Ball \(gameCups.cups[index].hasBall) - Empty \(gameCups.cups[index].emptyPos)")
+        print ("Id: \(gameCups.cups[index].id) - " +
+            "Position: \(gameCups.cups[index].position) - " +
+            "Has Ball \(gameCups.cups[index].hasBall) - " +
+            "Empty \(gameCups.cups[index].emptyPos)")
     }
 }
 
