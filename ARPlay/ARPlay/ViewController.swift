@@ -84,10 +84,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 	@IBAction func tapScene(_ sender: UITapGestureRecognizer) {
 		let location = sender.location(in: self.sceneView)
 		let hits = self.sceneView.hitTest(location, options:nil)
-		if let first = hits.first {
-			renderer.moveCup(index: 1, from: 1, to: 2)
-
+		if let first = hits.first, let cup = renderer.parentCup(from: first.node) {
+			renderer.lift(cup: cup)
+		} else {
+			// Shuffle cups
 		}
-
 	}
 }
