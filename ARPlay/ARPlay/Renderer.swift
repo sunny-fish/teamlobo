@@ -29,4 +29,10 @@ class Renderer: NSObject {
 		}
 	}
 
+	
+
+	func lift(cup: SCNNode) {
+
+		cup.position = SCNVector3(cup.position.x, cup.position.y + 0.3, cup.position.z)
+	}
 }

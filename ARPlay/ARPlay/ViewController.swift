@@ -64,6 +64,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         return node
     }
 */
+
+	
     
     func session(_ session: ARSession, didFailWithError error: Error) {
         // Present an error message to the user
@@ -79,4 +81,11 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Reset tracking and/or remove existing anchors if consistent tracking is required
         
     }
+	@IBAction func tapScene(_ sender: UITapGestureRecognizer) {
+		let location = sender.location(in: self.sceneView)
+		let hits = self.sceneView.hitTest(location, options:nil)
+		for item in hits {
+			renderer.lift(cup: item.node)
+		}
+	}
 }
