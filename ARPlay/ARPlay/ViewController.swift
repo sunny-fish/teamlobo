@@ -84,8 +84,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 	@IBAction func tapScene(_ sender: UITapGestureRecognizer) {
 		let location = sender.location(in: self.sceneView)
 		let hits = self.sceneView.hitTest(location, options:nil)
-		for item in hits {
-			renderer.lift(cup: item.node)
+		if let first = hits.first {
+			renderer.moveCup(index: 1, from: 1, to: 2)
+
 		}
+
 	}
 }

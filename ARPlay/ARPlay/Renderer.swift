@@ -15,24 +15,52 @@ class Renderer: NSObject {
 	let cupNode: SCNNode
 	let ballNode: SCNNode
 	let scene = SCNScene(named: "art.scnassets/RedPlasticCup.scn")!
+	var cups = [SCNNode]()
+	var positions = [SCNVector3]()
 
 	override init() {
 		cupNode = scene.rootNode.childNode(withName: "Cup", recursively: true)!
 		ballNode = scene.rootNode.childNode(withName: "Ball", recursively: true)!
 		super.init()
 		cupNode.removeFromParentNode()
-		ballNode.removeFromParentNode()
 		for i in 0..<cupCount {
 			let cupCopy: SCNNode = cupNode.clone()
+			cups.append(cupCopy)
 			cupCopy.position = SCNVector3(cupCopy.position.x + (0.3 * Float(i)), cupCopy.position.y, cupCopy.position.z)
 			scene.rootNode.addChildNode(cupCopy)
 		}
+		positions = cups.map({ (node) -> SCNVector3 in
+			return node.position
+		})
 	}
 
-	
+	func parentCup(from node: SCNNode) -> SCNNode? {
+		if node.name == "Cup" {
+			return node
+		}
+		guard let parent = node.parent else {
+			return nil
+		}
+		return parentCup(from:parent)
+	}
 
 	func lift(cup: SCNNode) {
+		guard let parentCup = parentCup(from: cup) else {
+			return
+		}
+		let destination = SCNVector3(parentCup.position.x, parentCup.position.y + 0.3, parentCup.position.z)
+		let action = SCNAction.move(to: destination, duration: 0.5)
+		parentCup.runAction(action)
+	}
 
-		cup.position = SCNVector3(cup.position.x, cup.position.y + 0.3, cup.position.z)
+	func moveCup(index: Int, from: Int, to: Int) {
+		let zDirection: Float = from > to ? -1 : 0
+		let fromPosition = positions[from]
+		let toPosition = positions[to]
+		let halfPosition = SCNVector3((toPosition.x - fromPosition.x) / 2.0, toPosition.y, toPosition.z + (0.2 * zDirection))
+		let first = SCNAction.move(to: halfPosition, duration: 0.5)
+		let second = SCNAction.move(to: toPosition, duration: 0.5)
+		let sequence = SCNAction.sequence([first, second])
+		self.cups[index].runAction(sequence)
 	}
 }
