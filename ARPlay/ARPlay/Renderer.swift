@@ -63,17 +63,16 @@ class Renderer: NSObject {
 	}
 
 	func moveCup(index: Int, from: Int, to: Int) {
-        
+
         let move = cupGame.ShuffleCupsOnce()
         // move.from
         // move.to
         
-        
-        
-		let zDirection: Float = from > to ? -1 : 0
-		let fromPosition = positions[from]
+		let zDirection: Float = from > to ? -1 : 1
+
+        let fromPosition = positions[from]
 		let toPosition = positions[to]
-		let halfPosition = SCNVector3((toPosition.x - fromPosition.x) / 2.0, toPosition.y, toPosition.z + (0.2 * zDirection))
+		let halfPosition = SCNVector3(((toPosition.x - fromPosition.x) / 2.0) + fromPosition.x, toPosition.y, toPosition.z + (0.2 * zDirection))
 		let first = SCNAction.move(to: halfPosition, duration: 0.5)
 		let second = SCNAction.move(to: toPosition, duration: 0.5)
 		let sequence = SCNAction.sequence([first, second])
