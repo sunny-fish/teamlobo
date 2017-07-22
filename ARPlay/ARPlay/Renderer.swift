@@ -65,11 +65,17 @@ class Renderer: NSObject {
 	func moveCups() {
         let move = cupGame.ShuffleCupsOnce()
         
+        let fromPosition = positions[move.from]
+        let toPosition = positions[move.to]
+        
         let act1 = moveCup(from: move.from, to: move.to)
         let act2 = moveCup(from: move.to, to: move.from)
         
 		self.cups[move.from].runAction(act1)
         self.cups[move.to].runAction(act2)
+        
+        positions[move.from] = toPosition
+        positions[move.to] = fromPosition
 	}
     
     func moveCup(from: Int, to: Int) -> SCNAction {
@@ -84,6 +90,7 @@ class Renderer: NSObject {
         let first = SCNAction.move(to: halfPosition, duration: 0.5)
         let second = SCNAction.move(to: toPosition, duration: 0.5)
         let sequence = SCNAction.sequence([first, second])
+        
         
         return sequence
     }
