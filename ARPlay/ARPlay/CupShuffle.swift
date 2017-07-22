@@ -12,6 +12,7 @@ struct Cup {
     var hasBall: Bool
     var position: Int
     var emptyPos: Bool
+    var id: Int
 }
 
 struct CupGame {
