@@ -24,10 +24,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.showsStatistics = true
         
         // Create a new scene
-let scene = SCNScene()
+		let scene = SCNScene()
 		let boxGeometry = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0)
 		let boxNode = SCNNode(geometry: boxGeometry)
-		boxNode
+		
 	}
     
     override func viewWillAppear(_ animated: Bool) {
