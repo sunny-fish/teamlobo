@@ -1,0 +1,555 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		070E2E2C1F239FB8008B8E7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070E2E2B1F239FB8008B8E7C /* AppDelegate.swift */; };
+		070E2E2E1F239FB8008B8E7C /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 070E2E2D1F239FB8008B8E7C /* art.scnassets */; };
+		070E2E301F239FB8008B8E7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070E2E2F1F239FB8008B8E7C /* ViewController.swift */; };
+		070E2E331F239FB8008B8E7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 070E2E311F239FB8008B8E7C /* Main.storyboard */; };
+		070E2E351F239FB8008B8E7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 070E2E341F239FB8008B8E7C /* Assets.xcassets */; };
+		070E2E381F239FB8008B8E7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 070E2E361F239FB8008B8E7C /* LaunchScreen.storyboard */; };
+		070E2E431F239FB8008B8E7C /* ARPlayEricTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070E2E421F239FB8008B8E7C /* ARPlayEricTests.swift */; };
+		070E2E4E1F239FB8008B8E7C /* ARPlayEricUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070E2E4D1F239FB8008B8E7C /* ARPlayEricUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		070E2E3F1F239FB8008B8E7C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 070E2E201F239FB8008B8E7C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 070E2E271F239FB8008B8E7C;
+			remoteInfo = ARPlayEric;
+		};
+		070E2E4A1F239FB8008B8E7C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 070E2E201F239FB8008B8E7C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 070E2E271F239FB8008B8E7C;
+			remoteInfo = ARPlayEric;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		070E2E281F239FB8008B8E7C /* ARPlayEric.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARPlayEric.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		070E2E2B1F239FB8008B8E7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		070E2E2D1F239FB8008B8E7C /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		070E2E2F1F239FB8008B8E7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		070E2E321F239FB8008B8E7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		070E2E341F239FB8008B8E7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		070E2E371F239FB8008B8E7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		070E2E391F239FB8008B8E7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		070E2E3E1F239FB8008B8E7C /* ARPlayEricTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARPlayEricTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		070E2E421F239FB8008B8E7C /* ARPlayEricTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPlayEricTests.swift; sourceTree = "<group>"; };
+		070E2E441F239FB8008B8E7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		070E2E491F239FB8008B8E7C /* ARPlayEricUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARPlayEricUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		070E2E4D1F239FB8008B8E7C /* ARPlayEricUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPlayEricUITests.swift; sourceTree = "<group>"; };
+		070E2E4F1F239FB8008B8E7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		070E2E251F239FB8008B8E7C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		070E2E3B1F239FB8008B8E7C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		070E2E461F239FB8008B8E7C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		070E2E1F1F239FB8008B8E7C = {
+			isa = PBXGroup;
+			children = (
+				070E2E2A1F239FB8008B8E7C /* ARPlayEric */,
+				070E2E411F239FB8008B8E7C /* ARPlayEricTests */,
+				070E2E4C1F239FB8008B8E7C /* ARPlayEricUITests */,
+				070E2E291F239FB8008B8E7C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		070E2E291F239FB8008B8E7C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				070E2E281F239FB8008B8E7C /* ARPlayEric.app */,
+				070E2E3E1F239FB8008B8E7C /* ARPlayEricTests.xctest */,
+				070E2E491F239FB8008B8E7C /* ARPlayEricUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		070E2E2A1F239FB8008B8E7C /* ARPlayEric */ = {
+			isa = PBXGroup;
+			children = (
+				070E2E2B1F239FB8008B8E7C /* AppDelegate.swift */,
+				070E2E2D1F239FB8008B8E7C /* art.scnassets */,
+				070E2E2F1F239FB8008B8E7C /* ViewController.swift */,
+				070E2E311F239FB8008B8E7C /* Main.storyboard */,
+				070E2E341F239FB8008B8E7C /* Assets.xcassets */,
+				070E2E361F239FB8008B8E7C /* LaunchScreen.storyboard */,
+				070E2E391F239FB8008B8E7C /* Info.plist */,
+			);
+			path = ARPlayEric;
+			sourceTree = "<group>";
+		};
+		070E2E411F239FB8008B8E7C /* ARPlayEricTests */ = {
+			isa = PBXGroup;
+			children = (
+				070E2E421F239FB8008B8E7C /* ARPlayEricTests.swift */,
+				070E2E441F239FB8008B8E7C /* Info.plist */,
+			);
+			path = ARPlayEricTests;
+			sourceTree = "<group>";
+		};
+		070E2E4C1F239FB8008B8E7C /* ARPlayEricUITests */ = {
+			isa = PBXGroup;
+			children = (
+				070E2E4D1F239FB8008B8E7C /* ARPlayEricUITests.swift */,
+				070E2E4F1F239FB8008B8E7C /* Info.plist */,
+			);
+			path = ARPlayEricUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		070E2E271F239FB8008B8E7C /* ARPlayEric */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 070E2E521F239FB8008B8E7C /* Build configuration list for PBXNativeTarget "ARPlayEric" */;
+			buildPhases = (
+				070E2E241F239FB8008B8E7C /* Sources */,
+				070E2E251F239FB8008B8E7C /* Frameworks */,
+				070E2E261F239FB8008B8E7C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ARPlayEric;
+			productName = ARPlayEric;
+			productReference = 070E2E281F239FB8008B8E7C /* ARPlayEric.app */;
+			productType = "com.apple.product-type.application";
+		};
+		070E2E3D1F239FB8008B8E7C /* ARPlayEricTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 070E2E551F239FB8008B8E7C /* Build configuration list for PBXNativeTarget "ARPlayEricTests" */;
+			buildPhases = (
+				070E2E3A1F239FB8008B8E7C /* Sources */,
+				070E2E3B1F239FB8008B8E7C /* Frameworks */,
+				070E2E3C1F239FB8008B8E7C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				070E2E401F239FB8008B8E7C /* PBXTargetDependency */,
+			);
+			name = ARPlayEricTests;
+			productName = ARPlayEricTests;
+			productReference = 070E2E3E1F239FB8008B8E7C /* ARPlayEricTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		070E2E481F239FB8008B8E7C /* ARPlayEricUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 070E2E581F239FB8008B8E7C /* Build configuration list for PBXNativeTarget "ARPlayEricUITests" */;
+			buildPhases = (
+				070E2E451F239FB8008B8E7C /* Sources */,
+				070E2E461F239FB8008B8E7C /* Frameworks */,
+				070E2E471F239FB8008B8E7C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				070E2E4B1F239FB8008B8E7C /* PBXTargetDependency */,
+			);
+			name = ARPlayEricUITests;
+			productName = ARPlayEricUITests;
+			productReference = 070E2E491F239FB8008B8E7C /* ARPlayEricUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		070E2E201F239FB8008B8E7C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Sunny Fish LLC";
+				TargetAttributes = {
+					070E2E271F239FB8008B8E7C = {
+						CreatedOnToolsVersion = 9.0;
+					};
+					070E2E3D1F239FB8008B8E7C = {
+						CreatedOnToolsVersion = 9.0;
+						TestTargetID = 070E2E271F239FB8008B8E7C;
+					};
+					070E2E481F239FB8008B8E7C = {
+						CreatedOnToolsVersion = 9.0;
+						TestTargetID = 070E2E271F239FB8008B8E7C;
+					};
+				};
+			};
+			buildConfigurationList = 070E2E231F239FB8008B8E7C /* Build configuration list for PBXProject "ARPlayEric" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 070E2E1F1F239FB8008B8E7C;
+			productRefGroup = 070E2E291F239FB8008B8E7C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				070E2E271F239FB8008B8E7C /* ARPlayEric */,
+				070E2E3D1F239FB8008B8E7C /* ARPlayEricTests */,
+				070E2E481F239FB8008B8E7C /* ARPlayEricUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		070E2E261F239FB8008B8E7C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				070E2E2E1F239FB8008B8E7C /* art.scnassets in Resources */,
+				070E2E381F239FB8008B8E7C /* LaunchScreen.storyboard in Resources */,
+				070E2E351F239FB8008B8E7C /* Assets.xcassets in Resources */,
+				070E2E331F239FB8008B8E7C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		070E2E3C1F239FB8008B8E7C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		070E2E471F239FB8008B8E7C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		070E2E241F239FB8008B8E7C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				070E2E301F239FB8008B8E7C /* ViewController.swift in Sources */,
+				070E2E2C1F239FB8008B8E7C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		070E2E3A1F239FB8008B8E7C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				070E2E431F239FB8008B8E7C /* ARPlayEricTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		070E2E451F239FB8008B8E7C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				070E2E4E1F239FB8008B8E7C /* ARPlayEricUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		070E2E401F239FB8008B8E7C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 070E2E271F239FB8008B8E7C /* ARPlayEric */;
+			targetProxy = 070E2E3F1F239FB8008B8E7C /* PBXContainerItemProxy */;
+		};
+		070E2E4B1F239FB8008B8E7C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 070E2E271F239FB8008B8E7C /* ARPlayEric */;
+			targetProxy = 070E2E4A1F239FB8008B8E7C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		070E2E311F239FB8008B8E7C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				070E2E321F239FB8008B8E7C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		070E2E361F239FB8008B8E7C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				070E2E371F239FB8008B8E7C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		070E2E501F239FB8008B8E7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		070E2E511F239FB8008B8E7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		070E2E531F239FB8008B8E7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 754XBNXR4L;
+				INFOPLIST_FILE = ARPlayEric/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fish.sunny.ARPlayEric;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		070E2E541F239FB8008B8E7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 754XBNXR4L;
+				INFOPLIST_FILE = ARPlayEric/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fish.sunny.ARPlayEric;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		070E2E561F239FB8008B8E7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 754XBNXR4L;
+				INFOPLIST_FILE = ARPlayEricTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fish.sunny.ARPlayEricTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ARPlayEric.app/ARPlayEric";
+			};
+			name = Debug;
+		};
+		070E2E571F239FB8008B8E7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 754XBNXR4L;
+				INFOPLIST_FILE = ARPlayEricTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fish.sunny.ARPlayEricTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ARPlayEric.app/ARPlayEric";
+			};
+			name = Release;
+		};
+		070E2E591F239FB8008B8E7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 754XBNXR4L;
+				INFOPLIST_FILE = ARPlayEricUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fish.sunny.ARPlayEricUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ARPlayEric;
+			};
+			name = Debug;
+		};
+		070E2E5A1F239FB8008B8E7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 754XBNXR4L;
+				INFOPLIST_FILE = ARPlayEricUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fish.sunny.ARPlayEricUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ARPlayEric;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		070E2E231F239FB8008B8E7C /* Build configuration list for PBXProject "ARPlayEric" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				070E2E501F239FB8008B8E7C /* Debug */,
+				070E2E511F239FB8008B8E7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		070E2E521F239FB8008B8E7C /* Build configuration list for PBXNativeTarget "ARPlayEric" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				070E2E531F239FB8008B8E7C /* Debug */,
+				070E2E541F239FB8008B8E7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		070E2E551F239FB8008B8E7C /* Build configuration list for PBXNativeTarget "ARPlayEricTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				070E2E561F239FB8008B8E7C /* Debug */,
+				070E2E571F239FB8008B8E7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		070E2E581F239FB8008B8E7C /* Build configuration list for PBXNativeTarget "ARPlayEricUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				070E2E591F239FB8008B8E7C /* Debug */,
+				070E2E5A1F239FB8008B8E7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 070E2E201F239FB8008B8E7C /* Project object */;
+}
