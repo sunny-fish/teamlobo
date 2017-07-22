@@ -67,6 +67,13 @@ class CupShuffle {
         }
     }
     
+    func ShuffleCupsOnce() -> (from: Int, to: Int) {
+        let moveFrom = RandomValidCupIndex(not: -1)
+        let moveTo = RandomValidCupIndex(not: moveFrom)
+        
+        return (from: moveFrom, to: moveTo)
+    }
+    
     func ShuffleCupStep(fromPos: Int, toPos: Int) {
         var arr = gameCups.cups
         arr.swapAt(fromPos, toPos)

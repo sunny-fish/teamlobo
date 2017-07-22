@@ -17,13 +17,22 @@ class Renderer: NSObject {
 	let scene = SCNScene(named: "art.scnassets/RedPlasticCup.scn")!
 	var cups = [SCNNode]()
 	var positions = [SCNVector3]()
+    
+    var cupGame: CupShuffle
 
 	override init() {
 		cupNode = scene.rootNode.childNode(withName: "Cup", recursively: true)!
 		ballNode = scene.rootNode.childNode(withName: "Ball", recursively: true)!
+        
+        cupGame = CupShuffle(cups: cupCount)
+        
 		super.init()
+        
+        cupGame.AddBall()
+        
 		cupNode.removeFromParentNode()
-		for i in 0..<cupCount {
+		
+        for i in 0..<cupCount {
 			let cupCopy: SCNNode = cupNode.clone()
 			cups.append(cupCopy)
 			cupCopy.position = SCNVector3(cupCopy.position.x + (0.3 * Float(i)), cupCopy.position.y, cupCopy.position.z)
@@ -54,6 +63,13 @@ class Renderer: NSObject {
 	}
 
 	func moveCup(index: Int, from: Int, to: Int) {
+        
+        let move = cupGame.ShuffleCupsOnce()
+        // move.from
+        // move.to
+        
+        
+        
 		let zDirection: Float = from > to ? -1 : 0
 		let fromPosition = positions[from]
 		let toPosition = positions[to]
