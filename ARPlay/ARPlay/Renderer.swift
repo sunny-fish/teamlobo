@@ -40,9 +40,11 @@ class Renderer: NSObject {
 			cupCopy.position = SCNVector3(cupCopy.position.x + (0.3 * Float(i)), cupCopy.position.y, cupCopy.position.z)
 			scene.rootNode.addChildNode(cupCopy)
 		}
+        
 		positions = cups.map({ (node) -> SCNVector3 in
 			return node.position
 		})
+        
 		for i in 0..<cupCount {
 			let first = positions[0]
 			let this = positions[i]
@@ -86,6 +88,14 @@ class Renderer: NSObject {
         
         positions[move.from] = toPosition
         positions[move.to] = fromPosition
+        
+        if (cupGame.gameCups.cups[move.from].hasBall) {
+            self.moveBall(to: move.to)
+        }
+        
+        if (cupGame.gameCups.cups[move.to].hasBall) {
+            self.moveBall(to: move.from)
+        }
 	}
     
     func moveCup(from: Int, to: Int) -> SCNAction {

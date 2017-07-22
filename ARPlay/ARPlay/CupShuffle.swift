@@ -71,6 +71,8 @@ class CupShuffle {
         let moveFrom = RandomValidCupIndex(not: -1)
         let moveTo = RandomValidCupIndex(not: moveFrom)
         
+        ShuffleCupStep(fromPos: moveFrom, toPos: moveTo)
+        
         return (from: moveFrom, to: moveTo)
     }
     
